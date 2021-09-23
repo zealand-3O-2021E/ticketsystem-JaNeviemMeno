@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="extern dll\" />
+    <Reference Include="ClassLibraryTicketSystem">
+      <HintPath>extern dll\ClassLibraryTicketSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
