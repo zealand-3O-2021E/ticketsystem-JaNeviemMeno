@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\adabo\Desktop\school\3rdSemester\projects\1stMandatory\ClassLibraryTicketSystem\ClassLibraryTicketSystem.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
