@@ -9,16 +9,16 @@ namespace ClassLibraryTicketSystem
     /// <summary>
     /// A class MC which i suppose is for a motorcycle :D 
     /// </summary>
-    public class MC
+    public class MC : Vehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
+        //public string Licenseplate { get; set; }
+        //public DateTime Date { get; set; }
 
         /// <summary>
         /// Method which returns price which is 125
         /// </summary>
         /// <returns>125</returns>
-        public double Price()
+        public override double Price()
         {
             return 125;
         }
@@ -27,7 +27,7 @@ namespace ClassLibraryTicketSystem
         /// Method which returns the type of Vehicle
         /// </summary>
         /// <returns>MC as string</returns>
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }

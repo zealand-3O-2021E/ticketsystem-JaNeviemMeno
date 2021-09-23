@@ -17,13 +17,14 @@ namespace ClassLibraryTicketSystem.Tests
             MC motor = new();
             var value = motor.Price();
             Assert.AreEqual(125,value);
+            
         }
 
         [TestMethod()]
         public void VehicleTest()
         {
             MC motor = new();
-            var value = motor.Vehicle();
+            var value = motor.VehicleType();
             Assert.AreEqual("MC", value);
         }
     }
