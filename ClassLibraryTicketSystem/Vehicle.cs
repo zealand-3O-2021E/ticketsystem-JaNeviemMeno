@@ -8,7 +8,17 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Vehicle
     {
-        public string LicensePlate { get; set; }
+        private string _licensePlate;
+        public string LicensePlate 
+        {
+            get { return _licensePlate; }
+            set { 
+                if (LicensePlate.Length > 7) 
+                {
+                    throw new ArgumentOutOfRangeException("License plate cannot be longer than 7 letters");
+                } 
+            }
+        }
         public DateTime Date { get; set; }
 
         public virtual double Price() 

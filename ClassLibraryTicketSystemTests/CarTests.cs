@@ -26,5 +26,15 @@ namespace ClassLibraryTicketSystem.Tests
             var value = car.VehicleType();
             Assert.AreEqual("car",value);
         }
+
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void LicensePlate()
+        {
+            Car car = new();
+            car.LicensePlate = "12345678";
+            Assert.Fail();
+        }
     }
 }
