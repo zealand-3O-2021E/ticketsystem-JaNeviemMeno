@@ -8,12 +8,15 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Vehicle
     {
+        public bool Brobizz { get; set; }
+        private double price;
+
         private string _licensePlate;
         public string LicensePlate 
         {
             get { return _licensePlate; }
             set { 
-                if (LicensePlate.Length > 7) 
+                if (_licensePlate.Length > 7) 
                 {
                     throw new ArgumentOutOfRangeException("License plate cannot be longer than 7 letters");
                 } 
@@ -23,13 +26,25 @@ namespace ClassLibraryTicketSystem
 
         public virtual double Price() 
         {
-            return 240;
+           
+            return price;
         }
         public virtual string VehicleType()
         {
             return "Vehicle";
         }
-
-
+        public Vehicle()
+        {
+            Brobizz = false;
+            _licensePlate = "";
+        }
+        public virtual double Discount(double price)
+        {
+            if (Brobizz == true)
+            {
+                return price - (price * 0.05);
+            }
+            return price;
+        }
     }
 }

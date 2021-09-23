@@ -33,8 +33,24 @@ namespace ClassLibraryTicketSystem.Tests
         public void LicensePlate()
         {
             Car car = new();
-            car.LicensePlate = "12345678";
+            car.LicensePlate = "12345678910";
             Assert.Fail();
         }
+        [TestMethod()]
+        public void Discount()
+        {
+            Car car = new();
+            car.Brobizz = true;
+            var expectedValue = car.Discount(car.Price());
+            Assert.AreEqual(228, expectedValue);
+        }
+        [TestMethod()]
+        public void Discount2()
+        {
+            Car car = new();
+            var expectedValue = car.Discount(car.Price());
+            Assert.AreEqual(240, expectedValue);
+        }
+
     }
 }

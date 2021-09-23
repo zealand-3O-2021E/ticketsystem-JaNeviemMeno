@@ -31,8 +31,7 @@ namespace ClassLibraryTicketSystem
         {
             return "MC";
         }
-
-
+        
 
 
     }
