@@ -28,14 +28,14 @@ namespace ClassLibraryTicketSystem.Tests
         }
 
 
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void LicensePlate()
-        {
-            Car car = new();
-            car.LicensePlate = "12345678910";
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
+        //public void LicensePlate()
+        //{
+        //    //Car car = new();
+        //    //car.LicensePlate = "12345678910";
+        //    //Assert.Fail();
+        //}
         [TestMethod()]
         public void Discount()
         {
